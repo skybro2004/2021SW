@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>
+            title
+        </title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <script type="text/javascript" src="./js/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>ㅁㄴㅇㄹ</h1>
+        </header>
+
+
+
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-content">
+                        header
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    content
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-content">
+                        expand-header
+                    </div>
+                    <div class="expand-btn" onclick="expand(this);">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card-content card-content-expand">
+                    expand-content<br>
+                    expand-content<br>
+                    expand-content<br>
+                    expand-content<br>
+                    expand-content<br>
+                </div>
+            </div>
+            
+            
+
+            <div class="card card-expand">
+                <div class="card-header">
+                    <div class="card-header-content">
+                        expand-header
+                    </div>
+                    <div class="expand-btn" onclick="expandd(this);">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    expand-content<br>
+                    expand-content<br>
+                    expand-content<br>
+                    expand-content<br>
+                    expand-content<br>
+                </div>
+            </div>
+            
+            
+
+            <div class="card card-btn">
+                오늘 급식은 어땠나요?
+            </div>
+            
+            
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-content">
+                        급식
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <ul>
+                        <li>밥</li>
+                        <li>국</li>
+                        <li>반찬1</li>
+                        <li>반찬2</li>
+                        <li>반찬3</li>
+                        <li>간식</li>
+                    </ul>
+
+                    <div class="star">
+                        <span class="star-base">
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                        </span>
+                        <span class="star-active">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="timetable" class="card">
+                <div class="card-header">
+                    <div class="card-header-content">
+                        오늘 시간표
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <div class="div-table">
+                        <div class="div-table-row">
+                            <div class="div-table-col period now">
+                                <div onclick="showTime(this);">1교시</div>
+                                <div class="time">9:00 ~ 9:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                        <div class="div-table-row">
+                            <div class="div-table-col period">
+                                <div onclick="showTime(this);">2교시</div>
+                                <div class="time">10:00 ~ 10:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                        <div class="div-table-row">
+                            <div class="div-table-col period">
+                                <div onclick="showTime(this);">3교시</div>
+                                <div class="time">11:00 ~ 11:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                        <div class="div-table-row">
+                            <div class="div-table-col period">
+                                <div onclick="showTime(this);">4교시</div>
+                                <div class="time">12:00 ~ 12:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                        <div class="div-table-row">
+                            <div class="div-table-col period">
+                                <div onclick="showTime(this);">5교시</div>
+                                <div class="time">12:00 ~ 12:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                        <div class="div-table-row">
+                            <div class="div-table-col period">
+                                <div onclick="showTime(this);">6교시</div>
+                                <div class="time">12:00 ~ 12:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                        <div class="div-table-row">
+                            <div class="div-table-col period">
+                                <div onclick="showTime(this);">7교시</div>
+                                <div class="time">12:00 ~ 12:50</div>
+                            </div>
+                            <div class="div-table-col">
+                                ㅁㄴㅇㄹ
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="butn();">asdf</button>
+                </div>
+            </div>
+
+            
+
+
+
+
+            
+        </main>
+
+
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </body>
+</html>

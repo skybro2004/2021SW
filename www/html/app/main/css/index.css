@@ -1,0 +1,196 @@
+html{
+    font-size: 1.2em;
+}
+
+:root{
+    --first-color: #2184BF;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: fit-content;
+    min-height: 100vh;
+    background-color: #F2F4F6;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+header{
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+header h1{
+    display: inline;
+}
+
+
+main{
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+
+
+
+
+
+.card{
+    border: 1px solid var(--first-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.card-header-content{
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5rem;
+}
+.expand-btn{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content{
+    max-height: 70vh;
+    padding: 0.5rem;
+    overflow-y: auto;
+}
+
+.card-content-expand{
+    max-height: 0;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+}
+.card-content-expand.expanded{
+    max-height: 70vh;
+}
+
+
+.card-expand{
+    max-height: 2.4rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.card-expand.expanded{
+    max-height: 70vh;
+}
+
+
+
+.div-table{
+    width: 100%;
+    display: table;
+}
+.div-table-row{
+    position: relative;
+    display: table-row;
+}
+.div-table-col{
+    display: table-cell;
+}
+
+
+.star{
+    position: relative;
+    height: 1.2em;
+}
+.star-base{
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+}
+.star-active{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.4em;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+
+#timetable 
+
+.period{
+    padding-left: 0.5em;
+    width: 5.5rem;
+    position: relative;
+}
+
+.period::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    bottom: 1.1em;
+    background-color: var(--first-color);
+    transition: all 0.2s ease-in-out;
+}
+.period.now::before{
+    content: "";
+    width: 0.2em;
+    height: 1.1em;
+    bottom: 0;
+    left: 0.1em;
+    border-radius: 0.1em;
+}
+
+.period.break::before{
+    content: "";
+    width: 0.3em;
+    height: 0.3em;
+    bottom: -0.15em;
+    left: 0.05em;
+    border-radius: 0.15em;
+}
+
+.time{
+    font-size: 0.8rem;
+    color: gray;
+    white-space: nowrap;
+    height: 0;
+    overflow-y: hidden;
+    transition: all 0.2s;
+}
+.time.show{
+    height: 1rem;
+}
+
+
+.card-btn{
+    padding: 0.5rem;
+    color: white;
+    background-color: var(--first-color);
+
+    box-shadow: 0px 0px 20px #1463918c;
+    transition: all 0.2s;
+
+}
+.card-btn:hover{
+    box-shadow: none;
+    background-color: inherit;
+    color: black;
+}
