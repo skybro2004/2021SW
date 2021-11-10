@@ -4,7 +4,7 @@
         <meta charset='utf-8'>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>
-            title
+            메인
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index.css">
         <script type="text/javascript" src="./js/index.js"></script>
@@ -17,6 +17,7 @@
 
 
         <main>
+            <!--
             <div class="card">
                 <div class="card-header">
                     <div class="card-header-content">
@@ -71,9 +72,21 @@
                 </div>
             </div>
             
-            
+            -->
+
 
             <div class="card card-btn">
+                <ion-icon class="card-icon" name="log-in-outline"></ion-icon>
+                <span class="card-title">로그인 해주세요!</span>
+                
+            </div>
+
+
+
+
+
+            <div class="card card-btn card-popup">
+                <ion-icon class="card-icon" name="open-outline"></ion-icon>
                 오늘 급식은 어땠나요?
             </div>
             
@@ -81,9 +94,11 @@
             
             <div class="card">
                 <div class="card-header">
-                    <div class="card-header-content">
-                        급식
-                    </div>
+                    <ion-icon class="card-icon" name="fast-food-outline" onclick="alert('asdf')"></ion-icon>
+                    <span class="card-title">
+                        오늘의 급식
+                    </span>
+                    <ion-icon name="open-outline"></ion-icon>
                 </div>
                 
                 <div class="card-content">
@@ -120,79 +135,80 @@
 
             <div id="timetable" class="card">
                 <div class="card-header">
-                    <div class="card-header-content">
+                    <ion-icon class="card-icon" name="apps-outline"></ion-icon>
+                    <span class="card-title">
                         오늘 시간표
-                    </div>
+                    </span>
                 </div>
                 
                 <div class="card-content">
-                    <div class="div-table">
-                        <div class="div-table-row">
-                            <div class="div-table-col period now">
+                    <div class="timetable">
+                        <div class="timetable-row">
+                            <div class="timetable-col period now">
                                 <div onclick="showTime(this);">1교시</div>
                                 <div class="time">9:00 ~ 9:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
 
-                        <div class="div-table-row">
-                            <div class="div-table-col period">
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">2교시</div>
                                 <div class="time">10:00 ~ 10:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
 
-                        <div class="div-table-row">
-                            <div class="div-table-col period">
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">3교시</div>
                                 <div class="time">11:00 ~ 11:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
 
-                        <div class="div-table-row">
-                            <div class="div-table-col period">
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">4교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
 
-                        <div class="div-table-row">
-                            <div class="div-table-col period">
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">5교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
 
-                        <div class="div-table-row">
-                            <div class="div-table-col period">
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">6교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
 
-                        <div class="div-table-row">
-                            <div class="div-table-col period">
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">7교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="div-table-col">
+                            <div class="timetable-col">
                                 ㅁㄴㅇㄹ
                             </div>
                         </div>
@@ -204,6 +220,19 @@
 
             
 
+
+            <div class="card card-btn">
+                <ion-icon class="card-icon" name="person-outline"></ion-icon>
+                <span class="card-title">마이페이지</span>
+            </div>
+
+
+
+
+            <div class="card card-btn">
+                <ion-icon class="card-icon" name="settings-outline"></ion-icon>
+                <span class="card-title">설정</span>
+            </div>
 
 
 

@@ -1,0 +1,121 @@
+:root{
+    --first-color: #2184BF;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 1.2em;
+}
+
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+header{
+    
+    display: flex;
+    align-items: center;
+    transition: height 0.2s;
+}
+
+footer{
+    height: 2em;
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+.container{
+    width: 100%;
+    max-width: 30em;
+    padding: 1em;
+    border: 1px solid var(--first-color);
+    border-radius: 10px;
+}
+.login-wrapper{
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.login-id, .login-pw{
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+}
+.login-id{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0;
+}
+.login-pw{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+}
+.login-id-icon, .login-pw-icon{
+    padding-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.login-id input, .login-pw input{
+    width: 100%;
+    border: 0;
+    height: 2em;
+    font-size: 1rem;
+}
+.login-id input:focus, .login-pw input:focus{
+    outline: none;
+}
+
+
+.login-btn{
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: var(--first-color);
+    border: 1px solid var(--first-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+.login-btn:active{
+    background-color: inherit;
+    color: black;
+}
+
+
+.login-footer{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.login-footer-content{
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    
+}
+
+.login-footer-content a{
+    font-size: 0.6rem;
+    color: gray;
+    text-decoration: none;
+    word-break: keep-all;
+}
