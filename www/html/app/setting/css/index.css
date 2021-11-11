@@ -141,9 +141,3 @@ select{
     border-radius: 5px;
     background-color: white;
 }
-option{
-    border: 1px solid red;
-}
-option{
-    background-color: green;
-}

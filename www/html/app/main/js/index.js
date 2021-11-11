@@ -1,14 +1,3 @@
-function expand(element){
-    element.classList.toggle('rotate')
-    element.parentNode.nextElementSibling.classList.toggle("expanded")
-}
-
-
-function expandd(element){
-    element.classList.toggle('rotate')
-    element.parentNode.parentNode.classList.toggle("expanded")
-}
-
 function showTime(element){
     element.nextElementSibling.classList.toggle("show")
 }
@@ -49,4 +38,12 @@ function butn() {
         periods[period].classList.toggle("now")
         isBreak = false
     }
+}
+
+
+
+function locate(element) {
+    var addr = element.getAttribute('href')
+    console.log(addr)
+    window.AppInventor.setWebViewString("locate-" + addr)
 }

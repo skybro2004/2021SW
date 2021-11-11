@@ -1,0 +1,22 @@
+{
+    "settings":{
+        "basic":{
+            "darkmode":false,
+            "notifications":false
+        },
+
+        "schedular":{
+            "grade":1,
+            "class":1,
+            "selectA":"none",
+            "selectC":"none",
+            "selectD":"none",
+            "selectE":"none",
+            "selectF":"none"
+        },
+
+        "meal":{
+            "allergy":[]
+        }
+    }
+}
