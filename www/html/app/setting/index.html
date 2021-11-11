@@ -14,13 +14,92 @@
         </header>
 
         <main>
-            
+            <div class="section">
+                <div class="section-header">
+                    <ion-icon class="section-icon" name="settings-outline"></ion-icon>
+                    <span class="section-title">기본 설정</span>
+                </div>
+                <div class="section-content">
+                    <div class="option">
+                        <span class="option-title">다크모드</span>
+                        <label id="switch-darkmode" class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <span class="option-title">알림</span>
+                        <label id="switch-notification" class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <ion-icon class="section-icon" name="list-outline"></ion-icon>
+                    <span class="section-title">시간표</span>
+                </div>
+                <div class="section-content">
+                    <div class="option">
+                        <span class="option-title">선택과목 설정</span>
+                    </div>
+
+                    <div class="option">
+                        <span class="option-title">선택 A</span>
+                        <select>
+                            <option>프로그래밍</option>
+                            <option>ㅁㄴㅇㄹ</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <span class="option-title">선택 A</span>
+                        <select>
+                            <option>asdf</option>
+                            <option>고전문학 감상</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <ion-icon class="section-icon" name="fast-food-outline"></ion-icon>
+                    <span class="section-title">급식</span>
+                </div>
+                <div class="section-content">
+                    <div class="option">
+                        <span class="option-title">알레르기 설정</span>
+                    </div>
+
+                    <div class="option">
+                        <span class="option-title">1. 달걀</span>
+                        <label id="switch-allergy-1" class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <span class="option-title">2. 우유</span>
+                        <label id="switch-allergy-2" class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </main>
 
 
 
 
 
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script type="text/javascript" src="./js/index.js"></script>
     </body>
 </html>
