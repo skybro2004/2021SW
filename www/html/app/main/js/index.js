@@ -1,3 +1,4 @@
+/*
 function showTime(element){
     element.nextElementSibling.classList.toggle("show")
 }
@@ -39,11 +40,17 @@ function butn() {
         isBreak = false
     }
 }
+*/
 
+
+var webViewString = JSON.parse(window.AppInventor.getWebViewString())
+if(webViewString.id=="logout"){
+    document.getElementById("login").classList.toggle("disable")
+}
 
 
 function locate(element) {
-    var addr = element.getAttribute('href')
-    console.log(addr)
+    var addr = element.getAttribute('id')
     window.AppInventor.setWebViewString("locate-" + addr)
 }
+document.getElementById("test").innerHTML = window.AppInventor.getWebViewString()

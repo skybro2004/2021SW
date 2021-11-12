@@ -74,7 +74,23 @@
             
             -->
 
-            <div class="card card-btn" onclick="locate(this)" href="../login">
+            <div class="card">
+                <div class="card-header">
+                    <ion-icon class="card-icon" name="fast-food-outline" onclick="alert('asdf')"></ion-icon>
+                    <span class="card-title">
+                        test
+                    </span>
+                    <ion-icon name="open-outline"></ion-icon>
+                </div>
+                
+                <div class="card-content">
+                    <p id="test"> </p>
+                </div>
+            </div>
+
+
+
+            <div id="login" class="card card-btn disable" onclick="locate(this)">
                 <ion-icon class="card-icon" name="log-in-outline"></ion-icon>
                 <span class="card-title">로그인 해주세요!</span>
             </div>
@@ -83,7 +99,7 @@
 
 
 
-            <div class="card card-btn card-popup">
+            <div id="survey" class="card card-btn card-popup disable" onclick="locate(this)">
                 <ion-icon class="card-icon" name="open-outline"></ion-icon>
                 오늘 급식은 어땠나요?
             </div>
@@ -219,7 +235,7 @@
             
 
 
-            <div class="card card-btn">
+            <div id="mypage" class="card card-btn" onclick="locate(this)">
                 <ion-icon class="card-icon" name="person-outline"></ion-icon>
                 <span class="card-title">마이페이지</span>
             </div>
@@ -227,7 +243,7 @@
 
 
 
-            <div class="card card-btn">
+            <div id="settings" class="card card-btn" onclick="locate(this)">
                 <ion-icon class="card-icon" name="settings-outline"></ion-icon>
                 <span class="card-title">설정</span>
             </div>

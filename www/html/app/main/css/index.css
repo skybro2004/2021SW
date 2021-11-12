@@ -41,6 +41,13 @@ ul{
 
 
 
+.disable{
+    display: none !important;
+    border: 1px solid red !important;
+}
+
+
+
 /*==========/header==========*/
 /*==========main==========*/
 
