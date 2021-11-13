@@ -22,7 +22,7 @@
                 <div class="section-content">
                     <div class="option">
                         <span class="option-title">다크모드</span>
-                        <label id="switch-darkmode" class="switch">
+                        <label id="switch-basic-darkmode" class="switch">
                             <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
@@ -30,7 +30,7 @@
 
                     <div class="option">
                         <span class="option-title">알림</span>
-                        <label id="switch-notification" class="switch">
+                        <label id="switch-basic-notifications" class="switch">
                             <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
@@ -50,7 +50,7 @@
 
                     <div class="option">
                         <span class="option-title">학년</span>
-                        <select id="select-grade">
+                        <select id="select-schedular-grade" onchange="selected(this)">
                             <option value="1">1학년</option>
                             <option value="2">2학년</option>
                             <option value="3">3학년</option>
@@ -59,7 +59,7 @@
 
                     <div class="option">
                         <span class="option-title">반</span>
-                        <select id="select-class">
+                        <select id="select-schedular-class" onchange="selected(this)">
                             <option value="1">1반</option>
                             <option value="2">2반</option>
                             <option value="3">3반</option>
@@ -79,7 +79,7 @@
 
                     <div class="option">
                         <span class="option-title">선택 A</span>
-                        <select id="select-selectA">
+                        <select id="select-schedular-selectA" onchange="selected(this)">
                             <option value="none">(선택)</option>
                             <option value="경제">경제</option>
                             <option value="일본어 I">일본어 I</option>
@@ -97,7 +97,7 @@
 
                     <div class="option">
                         <span class="option-title">선택 C</span>
-                        <select id="select-selectC">
+                        <select id="select-schedular-selectC" onchange="selected(this)">
                             <option value="none">(선택)</option>
                             <option value="세계사">세계사</option>
                             <option value="고전문학감상">고전문학감상</option>
@@ -114,7 +114,7 @@
 
                     <div class="option">
                         <span class="option-title">선택 D</span>
-                        <select id="select-selectD">
+                        <select id="select-schedular-selectD" onchange="selected(this)">
                             <option value="none">(선택)</option>
                             <option value="윤리와 사상">윤리와 사상</option>
                             <option value="정보통신">정보통신</option>
@@ -131,7 +131,7 @@
 
                     <div class="option">
                         <span class="option-title">선택 E</span>
-                        <select id="select-selectE">
+                        <select id="select-schedular-selectE" onchange="selected(this)">
                             <option value="none">(선택)</option>
                             <option value="생명과학 I">생명과학 I</option>
                             <option value="윤리와 사상">윤리와 사상</option>
@@ -148,7 +148,7 @@
 
                     <div class="option">
                         <span class="option-title">선택 F</span>
-                        <select id="select-selectF">
+                        <select id="select-schedular-selectF" onchange="selected(this)">
                             <option value="none">(선택)</option>
                             <option value="일본어 I">일본어 I</option>
                             <option value="세계지리">세계지리</option>
@@ -177,152 +177,152 @@
 
                     <div class="option">
                         <span class="option-title">1. 달걀</span>
-                        <label id="switch-allergy-1" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-1" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">2. 우유</span>
-                        <label id="switch-allergy-2" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-2" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">3. 메밀</span>
-                        <label id="switch-allergy-3" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-3" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">4. 땅콩</span>
-                        <label id="switch-allergy-4" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-4" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">5. 대두</span>
-                        <label id="switch-allergy-5" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-5" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">6. 밀</span>
-                        <label id="switch-allergy-6" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-6" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">7. 고등어</span>
-                        <label id="switch-allergy-7" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-7" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">8. 게</span>
-                        <label id="switch-allergy-8" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-8" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">9. 새우</span>
-                        <label id="switch-allergy-9" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-9" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">10. 돼지고기</span>
-                        <label id="switch-allergy-10" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-10" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">11. 복숭아</span>
-                        <label id="switch-allergy-11" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-11" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">12. 토마토</span>
-                        <label id="switch-allergy-12" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-12" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">13. 아황산</span>
-                        <label id="switch-allergy-13" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-13" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">14. 호두</span>
-                        <label id="switch-allergy-14" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-14" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">15. 닭고기</span>
-                        <label id="switch-allergy-15" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-15" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">16. 쇠고기</span>
-                        <label id="switch-allergy-16" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-16" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">17. 오징어</span>
-                        <label id="switch-allergy-17" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-17" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">18. 해산물</span>
-                        <label id="switch-allergy-18" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-18" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
 
                     <div class="option">
                         <span class="option-title">19. 잣</span>
-                        <label id="switch-allergy-19" class="switch">
-                            <input type="checkbox">
+                        <label id="switch-meal-allergy-19" class="switch">
+                            <input type="checkbox" onchange="toggled(this)">
                             <span></span>
                         </label>
                     </div>
