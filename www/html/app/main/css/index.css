@@ -172,17 +172,23 @@ main{
     width: 100%;
     display: table;
 }
+.timetable-header{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
 .timetable-row{
     position: relative;
     display: table-row;
 }
 .timetable-col{
     display: table-cell;
+    padding: 0.2rem 0;
 }
 
 .period{
-    padding-left: 0.5em;
-    width: 5.5rem;
+    padding: 0.3rem 0;
+    padding-left: 0.3em;
+    width: 4rem;
     position: relative;
 }
 
@@ -190,24 +196,26 @@ main{
     content: "";
     position: absolute;
     height: 0;
-    bottom: 1.1em;
+    top: 0.25rem;
     background-color: var(--first-color);
     transition: all 0.2s ease-in-out;
 }
 .period.now::before{
     content: "";
+    position: absolute;
     width: 0.2em;
     height: 1.1em;
-    bottom: 0;
-    left: 0.1em;
+    top: 0.35rem;
+    left: -0.1rem;
     border-radius: 0.1em;
 }
 
 .period.break::before{
     content: "";
+    position: absolute;
     width: 0.3em;
     height: 0.3em;
-    bottom: -0.15em;
+    top: 1.6rem;
     left: 0.05em;
     border-radius: 0.15em;
 }
@@ -215,9 +223,11 @@ main{
 .time{
     font-size: 0.8rem;
     color: gray;
+    width: 5rem;
     white-space: nowrap;
     height: 0;
     overflow-y: hidden;
+    overflow-x: visible;
     transition: all 0.2s;
 }
 .time.show{
@@ -225,3 +235,25 @@ main{
 }
 
 
+
+
+
+.mealList li{
+    position: relative;
+    padding: 0.3rem;
+}
+.allergy{
+    color: gray;
+    text-decoration: line-through;
+}
+.allergy::before{
+    content: "*";
+    position: absolute;
+    left: -0.5rem;
+    color: red;
+}
+.mealList-footer{
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    color: gray;
+}

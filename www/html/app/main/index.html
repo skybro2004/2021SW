@@ -7,7 +7,7 @@
             메인
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index.css">
-        <script type="text/javascript" src="./js/index.js"></script>
+        
     </head>
     <body>
         <header>
@@ -90,7 +90,7 @@
 
 
 
-            <div id="login" class="card card-btn disable" onclick="locate(this)">
+            <div id="login" class="card card-btn" onclick="locate(this)">
                 <ion-icon class="card-icon" name="log-in-outline"></ion-icon>
                 <span class="card-title">로그인 해주세요!</span>
             </div>
@@ -116,31 +116,10 @@
                 </div>
                 
                 <div class="card-content">
-                    <ul>
-                        <li>밥</li>
-                        <li>국</li>
-                        <li>반찬1</li>
-                        <li>반찬2</li>
-                        <li>반찬3</li>
-                        <li>간식</li>
-                    </ul>
+                    <ul class="mealList">
 
-                    <div class="star">
-                        <span class="star-base">
-                            <ion-icon name="star-outline"></ion-icon>
-                            <ion-icon name="star-outline"></ion-icon>
-                            <ion-icon name="star-outline"></ion-icon>
-                            <ion-icon name="star-outline"></ion-icon>
-                            <ion-icon name="star-outline"></ion-icon>
-                        </span>
-                        <span class="star-active">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                        </span>
-                    </div>
+                    </ul>
+                    <div class="mealList-footer"><span style="color: red;">*</span> : 알레르기를 유발할 수 있는 메뉴입니다.</div>
                 </div>
             </div>
 
@@ -151,19 +130,23 @@
                 <div class="card-header">
                     <ion-icon class="card-icon" name="list-outline"></ion-icon>
                     <span class="card-title">
-                        오늘 시간표
+                        시간표
                     </span>
                 </div>
                 
                 <div class="card-content">
+                    <div class="timetable-header">
+                        -요일 시간표
+                    </div>
+
                     <div class="timetable">
                         <div class="timetable-row">
-                            <div class="timetable-col period now">
+                            <div class="timetable-col period">
                                 <div onclick="showTime(this);">1교시</div>
                                 <div class="time">9:00 ~ 9:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
                             </div>
                         </div>
 
@@ -172,8 +155,8 @@
                                 <div onclick="showTime(this);">2교시</div>
                                 <div class="time">10:00 ~ 10:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
                             </div>
                         </div>
 
@@ -182,8 +165,8 @@
                                 <div onclick="showTime(this);">3교시</div>
                                 <div class="time">11:00 ~ 11:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
                             </div>
                         </div>
 
@@ -192,8 +175,15 @@
                                 <div onclick="showTime(this);">4교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
+                            </div>
+                        </div>
+
+                        <div class="timetable-row">
+                            <div class="timetable-col period">
+                                <div onclick="showTime(this);">점심시간</div>
+                                <div class="time">12:00 ~ 12:50</div>
                             </div>
                         </div>
 
@@ -202,8 +192,8 @@
                                 <div onclick="showTime(this);">5교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
                             </div>
                         </div>
 
@@ -212,8 +202,8 @@
                                 <div onclick="showTime(this);">6교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
                             </div>
                         </div>
 
@@ -222,8 +212,8 @@
                                 <div onclick="showTime(this);">7교시</div>
                                 <div class="time">12:00 ~ 12:50</div>
                             </div>
-                            <div class="timetable-col">
-                                ㅁㄴㅇㄹ
+                            <div class="timetable-col lessonName">
+                                -
                             </div>
                         </div>
 
