@@ -2,14 +2,91 @@
 <html>
     <head>
         <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>
             title
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index.css">
     </head>
     <body>
-        <div>
-            asdf
+        <div class="container">
+
+            <img src="./resources/bob.png">
+
+            <span class="question">식사의 양은 적당했나요?</span>
+            <div class="star">
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="1" onclick="rate(1);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="2" onclick="rate(2);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="3" onclick="rate(3);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="4"  onclick="rate(4);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="5"  onclick="rate(5);">
+                </label>
+                <span class="star-score">-/5</span>
+            </div>
+            <button class="btn-next disable" onclick="next()">다음</button>
         </div>
+
+
+
+        <div class="container disable display-none">
+
+            <img src="./resources/bob.png">
+
+            <span class="question">식사의 간은 적당했나요?</span>
+            <div class="star">
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="1" onclick="rate(1);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="2" onclick="rate(2);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="3" onclick="rate(3);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="4"  onclick="rate(4);">
+                </label>
+                <label>
+                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                    <input type="radio" name="star" value="5"  onclick="rate(5);">
+                </label>
+                <span class="star-score">-/5</span>
+            </div>
+            <button class="btn-next disable" onclick="next()">다음</button>
+        </div>
+
+
+
+
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
     </body>
 </html>

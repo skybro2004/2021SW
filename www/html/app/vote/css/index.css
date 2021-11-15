@@ -1,6 +1,23 @@
+html{
+    font-size: 120%;
+}
+
+
+
+:root{
+    --first-color: #2184BF;
+
+    --bgcolor: #F2F4F6;
+
+    --card-color: #F7F7F7;
+}
+
+
+
 *{
-    border: 0;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -10,4 +27,109 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
+
+
+
+
+
+
+
+
+
+.container{
+    width: 100%;
+    max-width: 30rem;
+    padding: 1rem;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+img{
+    width: 70%;
+    max-width: 15rem;
+    border: 1px solid blue;
+    margin-bottom: 1rem;
+}
+
+
+.question{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.star{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.star label{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.1rem;
+    cursor: pointer;
+}
+.star input{
+    opacity: 0;
+}
+.star-inner{
+    font-size: 2rem;
+    color: yellow;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.star-disable{
+    color: white;
+}
+.star-enable{
+    color: yellow;
+}
+.star-outer{
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.star-score{
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+
+.btn-next{
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.3rem 1.5rem;
+    background-color: var(--first-color);
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #1463918c;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+*{
+    border: 0 !important;
+}
+
+
+
+.disable{
+    opacity: 0;
+}
+.display-none{
+    display: none;
+}
+
