@@ -2,85 +2,163 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <title>
             title
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index.css">
     </head>
     <body>
-        <div class="container">
-
-            <img src="./resources/bob.png">
-
-            <span class="question">식사의 양은 적당했나요?</span>
-            <div class="star">
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="1" onclick="rate(1);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="2" onclick="rate(2);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="3" onclick="rate(3);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="4"  onclick="rate(4);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="5"  onclick="rate(5);">
-                </label>
-                <span class="star-score">-/5</span>
+        <!--<div class="container">
+            <div class="wrapper">
+                
+                <img src="./resources/bob.png">
+    
+                <span class="question">식사의 양은 적당했나요?</span>
+                <div class="star">
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="1" onclick="rate(1);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="2" onclick="rate(2);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="3" onclick="rate(3);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="4"  onclick="rate(4);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="5"  onclick="rate(5);">
+                    </label>
+                    <span class="star-score">-/5</span>
+                </div>
+                <button class="btn-next disable" onclick="next()">다음</button>
             </div>
-            <button class="btn-next disable" onclick="next()">다음</button>
+
+        </div>-->
+
+
+
+        <div class="container">
+            <div class="wrapper">
+                
+                <img src="./resources/bob.png">
+    
+                <span class="question">급식의 양은 적당했나요?</span>
+                <input class="slider" type="range" name="rate" value="0" min="-2" max="2" oninput="slide(this)">
+                <div class="rate-footer">
+                    <span class="disable">너무 적었어요</span>
+                    <span class="disable">조금 적었어요</span>
+                    <span class="disable">적당했어요</span>
+                    <span class="disable">조금 많았어요</span>
+                    <span class="disable">너무 많았어요</span>
+                </div>
+    
+                <button id="asdf" class="btn-next" onclick="next()" disabled="disabled">다음</button>
+            </div>
+
         </div>
 
 
 
-        <div class="container disable display-none">
-
-            <img src="./resources/bob.png">
-
-            <span class="question">식사의 간은 적당했나요?</span>
-            <div class="star">
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="1" onclick="rate(1);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="2" onclick="rate(2);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="3" onclick="rate(3);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="4"  onclick="rate(4);">
-                </label>
-                <label>
-                    <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                    <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                    <input type="radio" name="star" value="5"  onclick="rate(5);">
-                </label>
-                <span class="star-score">-/5</span>
+        <div class="container invisible">
+            <div class="wrapper">
+                
+                <img src="./resources/bob.png">
+    
+                <span class="question">식사의 양은 적당했나요?</span>
+                <input class="slider" type="range" name="rate" value="0" min="-2" max="2" list="tickmarks" oninput="slide(this)">
+                <div class="rate-footer">
+                    <span class="disable">너무 싱거웠어요</span>
+                    <span class="disable">조금 싱거웠어요</span>
+                    <span class="disable">적당했어요</span>
+                    <span class="disable">조금 짰어요</span>
+                    <span class="disable">너무 짰어요</span>
+                </div>
+    
+                <button class="btn-next" onclick="next()" disabled="disabled">다음</button>
             </div>
-            <button class="btn-next disable" onclick="next()">다음</button>
+
+        </div>
+
+
+
+        <div class="container invisible">
+            <div class="wrapper">
+                
+                <img src="./resources/bob.png">
+    
+                <span id="randMeal" class="question">""은(는) 어땠나요?</span>
+                <div class="star">
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="1" onclick="rate(1);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="2" onclick="rate(2);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="3" onclick="rate(3);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="4"  onclick="rate(4);">
+                    </label>
+                    <label>
+                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
+                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
+                        <input type="radio" name="star" value="5"  onclick="rate(5);">
+                    </label>
+                    <span class="star-score">-/5</span>
+                </div>
+                <div class="rate-footer">
+                    <span class="disable">꽤 별로였어요</span>
+                    <span class="disable">조금 별로였어요</span>
+                    <span class="disable">그저 그랬어요</span>
+                    <span class="disable">맛있었어요</span>
+                    <span class="disable">정말 맛있었어요</span>
+                </div>
+                <button id="btn-upload" class="btn-next" onclick="done()" disabled="disabled">다음</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="container invisible">
+            <div class="wrapper">
+                
+                <img src="./resources/bob.png">
+    
+                <span id="randMeal" class="question">그 밖에 건의사항이 있나요?</span>
+                <div class="send-msg">
+                    <input class="textbox-send" type="text" placeholder="없다면 넘겨도 돼요!" onKeypress="javascript:if(event.keyCode==13) {sendMsg()}">
+                    <button class="btn-send" onclick="sendMsg()">
+                        <ion-icon class="icon-send" name="send-sharp"></ion-icon>
+                    </button>
+                </div>
+                <button class="btn-next" onclick="closeScreen()">완료!</button>
+            </div>
+
+        </div>
+        <div class="container invisible">
         </div>
 
 

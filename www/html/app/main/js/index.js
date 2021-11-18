@@ -62,7 +62,7 @@ var setting = webViewString.settings
 
 
 if(webViewString.id=="logout"){
-    document.getElementById("login").classList.toggle("disable")
+    document.getElementById("login").classList.remove("disable")
 }
 
 
@@ -85,7 +85,7 @@ if(date.getDay()==0){
 else if(date.getDay()==6){
     date.setDate(date.getDate() + 2)
 }
-
+date = new Date(2021, 10, 23)
 var url = endpoint + "/schedular"
 url += "?officeCode=" + "J10"
 url += "&schlCode=" + "7530081"
@@ -214,15 +214,23 @@ else{
 if(period==-1){
     
 }
-else if(isBreak){
-    document.getElementsByClassName("period")[period].classList.add("break")
+else{
+    if(isBreak){
+        document.getElementsByClassName("period")[period].classList.add("break")
+    }
+    else{
+        document.getElementsByClassName("period")[period].classList.add("now")
+    }
+}
+
+
+if((0<currentDate.getDay()<6) && (1250<=currentTime && currentTime<1800) && webViewString.lastSurvey!=getFormatDate(currentDate)){
+    document.getElementById("vote").classList.remove("disable")
 }
 else{
-    document.getElementsByClassName("period")[period].classList.add("now")
+    document.getElementById("vote").classList.add("disable")
 }
-
-
-
+document.getElementById("vote").classList.remove("disable")
 
 
 var mealSetting = setting.meal
@@ -233,6 +241,8 @@ url += "&schlCode=" + "7530081"
 //url += "&date=" + getFormatDate(date)
 url += "&date=" + getFormatDate(date)
 
+var meals = []
+
 fetch(url)
     .then(res => {
         return res.json()
@@ -242,6 +252,7 @@ fetch(url)
         if(data.code==200){
             var allergy = mealSetting.allergy
             for(const item of data.meal){
+                meals.push(item.name)
                 var temp = document.createElement("li")
                 for(const allergyNo of item.allergy){
                     if(allergy.includes(allergyNo)){
@@ -251,6 +262,7 @@ fetch(url)
                 temp.innerHTML = item.name
                 mealList.appendChild(temp)
             }
+            window.AppInventor.setWebViewString("meals-" + JSON.stringify(meals))
         }
         else if(data.code==404){
             mealList.innerHTML = "급식이 없어요!"
@@ -270,4 +282,9 @@ function locate(element) {
 }
 
 document.getElementById("test").innerHTML = window.AppInventor.getWebViewString()
+
+
+function shining() {
+    document.getElementById("test").innerHTML = meals
+}
 
