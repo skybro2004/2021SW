@@ -17,102 +17,35 @@
 
 
         <main>
-            <!--
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-header-content">
-                        header
-                    </div>
-                </div>
-
-                <div class="card-content">
-                    content
-                </div>
-            </div>
 
 
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-header-content">
-                        expand-header
-                    </div>
-                    <div class="expand-btn" onclick="expand(this);">
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card-content card-content-expand">
-                    expand-content<br>
-                    expand-content<br>
-                    expand-content<br>
-                    expand-content<br>
-                    expand-content<br>
-                </div>
-            </div>
-            
-            
-
-            <div class="card card-expand">
-                <div class="card-header">
-                    <div class="card-header-content">
-                        expand-header
-                    </div>
-                    <div class="expand-btn" onclick="expandd(this);">
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card-content">
-                    expand-content<br>
-                    expand-content<br>
-                    expand-content<br>
-                    expand-content<br>
-                    expand-content<br>
-                </div>
-            </div>
-            
-            -->
-
-            <div class="card">
-                <div class="card-header">
-                    <ion-icon class="card-icon" name="fast-food-outline" onclick="alert('asdf')"></ion-icon>
-                    <span class="card-title">
-                        test
-                    </span>
-                    <ion-icon name="open-outline"></ion-icon>
-                </div>
-                
-                <div class="card-content">
-                    <p id="test"> </p>
-                </div>
-            </div>
-
-
-
+            <!--로그인
             <div id="login" class="card card-btn" onclick="locate(this)">
                 <ion-icon class="card-icon" name="log-in-outline"></ion-icon>
                 <span class="card-title">로그인 해주세요!</span>
             </div>
+            -->
 
 
 
 
-
+            <!--급식 팝업-->
             <div id="vote" class="card card-btn card-popup disable" onclick="locate(this)">
                 <ion-icon class="card-icon" name="open-outline"></ion-icon>
                 오늘 급식은 어땠나요?
             </div>
-            
-            
-            
+
+
+
+            <!--급식 표시-->
             <div class="card">
                 <div class="card-header">
-                    <ion-icon class="card-icon" name="fast-food-outline" onclick="alert('asdf')"></ion-icon>
+                    <ion-icon class="card-icon" name="fast-food-outline"></ion-icon>
                     <span class="card-title">
                         오늘의 급식
                     </span>
-                    <ion-icon name="open-outline"></ion-icon>
+                    <ion-icon class="external-link" name="open-outline" href="https://skybro2004.com/meal" onclick="externalLink(this)"></ion-icon>
                 </div>
                 
                 <div class="card-content">
@@ -126,12 +59,14 @@
 
 
 
+            <!--시간표 표시-->
             <div id="timetable" class="card">
                 <div class="card-header">
                     <ion-icon class="card-icon" name="list-outline"></ion-icon>
                     <span class="card-title">
                         시간표
                     </span>
+                    <ion-icon class="external-link" name="open-outline" href="https://skybro2004.com/schedular" onclick="externalLink(this)"></ion-icon>
                 </div>
                 
                 <div class="card-content">
@@ -222,17 +157,35 @@
                 </div>
             </div>
 
-            
 
 
+
+            <!--마이페이지
             <div id="mypage" class="card card-btn" onclick="locate(this)">
                 <ion-icon class="card-icon" name="person-outline"></ion-icon>
                 <span class="card-title">마이페이지</span>
             </div>
+            -->
 
 
 
+            <!--쿠폰-->
+            <div class="card">
+                <div class="card-header">
+                    <ion-icon class="card-icon" name="fast-food-outline"></ion-icon>
+                    <span class="card-title">
+                        쿠폰
+                    </span>
+                </div>
+                
+                <div class="card-content">
+                    쿠폰 기능은 준비중이에요!
+                </div>
+            </div>
 
+
+
+            <!--설정-->
             <div id="settings" class="card card-btn" onclick="locate(this)">
                 <ion-icon class="card-icon" name="settings-outline"></ion-icon>
                 <span class="card-title">설정</span>
@@ -240,9 +193,9 @@
 
 
 
-            
         </main>
-        <button onclick="shining()">asdf</button>
+
+
 
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script type="text/javascript" src="./js/index.js"></script>

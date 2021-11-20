@@ -17,7 +17,8 @@ var temp = 0
 
 
 var mealList = JSON.parse(window.AppInventor.getWebViewString())
-var randMeal = mealList[Math.floor(Math.random() * mealList.length)]
+var randIndex = Math.floor(Math.random() * mealList.length)
+var randMeal = mealList[randIndex]
 
 document.getElementById("randMeal").innerHTML = randMeal + "은(는) 어땠나요?"
 
@@ -72,7 +73,26 @@ function next(){
 
 function done() {
     next()
-    alert("send => " + data)
+    alert("send => " + data + randIndex)
+    var url = "https://api.skybro2004.com"
+    url += "/mealSurvey"
+    url += "?date=" + getFormatDate(new Date)
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            quantity:data[0],
+            quality:data[1],
+            menuIndex:randIndex,
+            menuName:randMeal,
+            menuRate:data[2]
+        })
+    })
+
+
     window.AppInventor.setWebViewString("lastSurvey-" + getFormatDate(new Date))
 }
 
@@ -80,10 +100,30 @@ function done() {
 
 function sendMsg() {
     var msg = document.getElementsByClassName("textbox-send")[0].value
-    if(msg!=""){
-        alert("POST => " + msg)
+    if(msg==""){
+        document.getElementsByClassName("textbox-send")[0].blur()
+        return
     }
+    alert("POST => " + msg)
+    
+    var url = "https://api.skybro2004.com"
+    url += "/mealMsg"
+    url += "?date=" + getFormatDate(new Date)
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            msg: msg,
+        })
+    })
+
+    document.getElementsByClassName("textbox-send")[0].value = ""
     document.getElementsByClassName("textbox-send")[0].blur()
+
+    closeScreen()
 }
 
 

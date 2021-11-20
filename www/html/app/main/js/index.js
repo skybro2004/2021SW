@@ -1,49 +1,3 @@
-/*
-function showTime(element){
-    element.nextElementSibling.classList.toggle("show")
-}
-
-function now(element){
-    element.parentNode.classList.toggle("now")
-}
-
-function breakk(element){
-    element.parentNode.classList.toggle("now")
-    element.parentNode.classList.toggle("break")
-}
-
-
-function nextPeriod(presPeriod){
-    element.parentNode.classList.toggle("break")
-    presPeriod
-    document.getElementsByClassName("period")
-}
-
-var period = 0
-var isBreak = false
-function butn() {
-    var periods = document.getElementsByClassName("period")
-    if(isBreak==false){
-        periods[period].classList.toggle("now")
-        periods[period].classList.toggle("break")
-        isBreak = true
-    }
-    else{
-        periods[period].classList.toggle("break")
-        if(period==6){
-            period = 0
-        }
-        else{
-            period += 1
-        }
-        periods[period].classList.toggle("now")
-        isBreak = false
-    }
-}
-*/
-
-
-
 function getFormatDate(date){
     var year = date.getFullYear();              //yyyy
     var month = (1 + date.getMonth());          //M
@@ -55,25 +9,24 @@ function getFormatDate(date){
 
 
 
-
+//앱 설정 가져옴
 var webViewString = JSON.parse(window.AppInventor.getWebViewString())
 var setting = webViewString.settings
 
 
 
+/*
 if(webViewString.id=="logout"){
     document.getElementById("login").classList.remove("disable")
 }
+*/
 
 
+
+//날짜 정하기(주말일경우, 다음주 월요일 날짜 시간표/급식 표시 등)
 var date = new Date()
 const weekdays = ["월", "화", "수", "목", "금"]
 
-var endpoint = "https://api.skybro2004.com"
-
-
-
-var schedularSetting = setting.schedular
 
 if(17<date.getHours()){
     date.setDate(date.getDate() + 1)
@@ -85,7 +38,17 @@ if(date.getDay()==0){
 else if(date.getDay()==6){
     date.setDate(date.getDate() + 2)
 }
-date = new Date(2021, 10, 23)
+
+
+
+//api 엔드포인트
+var endpoint = "https://api.skybro2004.com"
+
+
+
+//시간표 불러오는 코드
+var schedularSetting = setting.schedular
+
 var url = endpoint + "/schedular"
 url += "?officeCode=" + "J10"
 url += "&schlCode=" + "7530081"
@@ -136,8 +99,7 @@ fetch(url)
     })
 
 
-
-
+//현재 몇교신지 표시
 var temp = document.getElementsByClassName("now")
 for(const element of temp){
     element.classList.remove("now")
@@ -224,21 +186,23 @@ else{
 }
 
 
+
+//급식 먹고 나서 팝업버튼 띄움
 if((0<currentDate.getDay()<6) && (1250<=currentTime && currentTime<1800) && webViewString.lastSurvey!=getFormatDate(currentDate)){
     document.getElementById("vote").classList.remove("disable")
 }
 else{
     document.getElementById("vote").classList.add("disable")
 }
-document.getElementById("vote").classList.remove("disable")
 
 
+
+//급식 표시하는 코드
 var mealSetting = setting.meal
 
 var url = endpoint + "/meal"
 url += "?officeCode=" + "J10"
 url += "&schlCode=" + "7530081"
-//url += "&date=" + getFormatDate(date)
 url += "&date=" + getFormatDate(date)
 
 var meals = []
@@ -276,15 +240,15 @@ fetch(url)
 
 
 
+//앱 내에서 스크린 이동
 function locate(element) {
     var addr = element.getAttribute('id')
     window.AppInventor.setWebViewString("locate-" + addr)
 }
 
-document.getElementById("test").innerHTML = window.AppInventor.getWebViewString()
 
 
-function shining() {
-    document.getElementById("test").innerHTML = meals
+//앱 내에서 외부링크 이동
+function externalLink(element) {
+    window.AppInventor.setWebViewString("open-" + element.getAttribute("href"))
 }
-

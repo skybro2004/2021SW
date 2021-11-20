@@ -95,6 +95,9 @@ main{
     width: 100%;
     font-weight: 600;
 }
+.external-link{
+    font-size: 1.2em;
+}
 
 
 
@@ -135,36 +138,8 @@ main{
     background-color: var(--card-color);
     color: black;
 }
-
-
-
 /*==========/card==========*/
 
-
-
-
-
-
-
-
-.star{
-    position: relative;
-    height: 1.2em;
-}
-.star-base{
-    position: absolute;
-    left: 0;
-    top: 0;
-    white-space: nowrap;
-}
-.star-hover{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: calc(3.7 * 1.2em);
-    white-space: nowrap;
-    overflow-x: hidden;
-}
 
 
 /*==========timetable==========*/
@@ -237,7 +212,7 @@ main{
 
 
 
-
+/*==========meal==========*/
 .mealList li{
     position: relative;
     padding: 0.3rem;
