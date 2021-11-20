@@ -73,7 +73,6 @@ function next(){
 
 function done() {
     next()
-    alert("send => " + data + randIndex)
     var url = "https://api.skybro2004.com"
     url += "/mealSurvey"
     url += "?date=" + getFormatDate(new Date)
@@ -104,7 +103,6 @@ function sendMsg() {
         document.getElementsByClassName("textbox-send")[0].blur()
         return
     }
-    alert("POST => " + msg)
     
     var url = "https://api.skybro2004.com"
     url += "/mealMsg"

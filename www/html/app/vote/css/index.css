@@ -56,7 +56,6 @@ body{
     width: 100%;
     max-width: 30rem;
     padding: 1rem;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,11 +64,19 @@ body{
     transition: all 0.2s;
 }
 
-img{
+.img{
     width: 70%;
     max-width: 15rem;
-    border: 1px solid blue;
     margin-bottom: 1rem;
+}
+.img.rotate{
+    animation: rotate_image 3s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -168,7 +175,6 @@ input[type=range]::-webkit-slider-thumb{
     font-size: 0.9rem;
     height: 1rem;
     margin-top: 0.5rem;
-    border: 1px solid red;
 }
 
 
