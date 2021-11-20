@@ -1,32 +1,93 @@
-var pageIndex = 0
+function getFormatDate(date){
+    var year = date.getFullYear();              //yyyy
+    var month = (1 + date.getMonth());          //M
+    month = month >= 10 ? month : '0' + month;  //month 두자리로 저장
+    var day = date.getDate();                   //d
+    day = day >= 10 ? day : '0' + day;          //day 두자리로 저장
+    return  year + '' + month + '' + day;       //'-' 추가하여 yyyy-mm-dd 형태 생성 가능
+}
 
+
+
+
+
+var pageIndex = 0
+var data = []
+var temp = 0
+
+
+var mealList = JSON.parse(window.AppInventor.getWebViewString())
+var randMeal = mealList[Math.floor(Math.random() * mealList.length)]
+
+document.getElementById("randMeal").innerHTML = randMeal + "은(는) 어땠나요?"
 
 
 function rate(score){
+    temp = score
+
     var element = document.getElementsByClassName("star-inner")
     for(var i=0; i<score; i++){
-        element[pageIndex*5 + i].classList.add("star-enable")
-        element[pageIndex*5 + i].classList.remove("star-disable")
+        element[i].classList.add("star-enable")
+        element[i].classList.remove("star-disable")
     }
     for(var i=4; score<=i; i--){
-        element[pageIndex*5 + i].classList.add("star-disable")
-        element[pageIndex*5 + i].classList.remove("star-enable")
+        element[i].classList.add("star-disable")
+        element[i].classList.remove("star-enable")
     }
-    document.getElementsByClassName("star-score")[pageIndex].innerHTML = score + "/5"
-    document.getElementsByClassName("btn-next")[pageIndex].classList.remove("disable")
+
+    var footer = document.getElementsByClassName("rate-footer")[pageIndex]
+    for(var i=0; i<footer.children.length; i++){
+        footer.children[i].classList.add("disable")
+    }
+    footer.children[score - 1].classList.remove("disable")
+    document.getElementsByClassName("star-score")[0].innerHTML = score + "/5"
+    document.getElementsByClassName("btn-next")[pageIndex].disabled = false
+}
+
+
+function slide(element) {
+    temp = element.value
+
+    var value = element.value
+    var footer = document.getElementsByClassName("rate-footer")[pageIndex]
+    for(var i=0; i<footer.children.length; i++){
+        footer.children[i].classList.add("disable")
+    }
+    footer.children[parseInt(value) + 2].classList.remove("disable")
+    document.getElementsByClassName("btn-next")[pageIndex].disabled = false
 }
 
 
 function next(){
+    data.push(temp)
+
     document.getElementsByClassName("container")[pageIndex].classList.add("disable")
-    setTimeout(function(index){
-        document.getElementsByClassName("container")[index].classList.add("display-none");
-    }, 300, pageIndex)
 
     pageIndex += 1
 
-    document.getElementsByClassName("container")[pageIndex].classList.remove("display-none");
-    setTimeout(function(index){
-        document.getElementsByClassName("container")[index].classList.remove("disable")
-    }, 300, pageIndex)
+    document.getElementsByClassName("container")[pageIndex].classList.remove("invisible")
+}
+
+
+
+function done() {
+    next()
+    alert("send => " + data)
+    window.AppInventor.setWebViewString("lastSurvey-" + getFormatDate(new Date))
+}
+
+
+
+function sendMsg() {
+    var msg = document.getElementsByClassName("textbox-send")[0].value
+    if(msg!=""){
+        alert("POST => " + msg)
+    }
+    document.getElementsByClassName("textbox-send")[0].blur()
+}
+
+
+
+function closeScreen() {
+    window.AppInventor.setWebViewString("close")
 }
