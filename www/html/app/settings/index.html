@@ -13,13 +13,17 @@
             <h1>설정</h1>
         </header>
 
+
+
         <main>
+            <!--기본설정-->
             <div class="section">
                 <div class="section-header">
                     <ion-icon class="section-icon" name="settings-outline"></ion-icon>
                     <span class="section-title">기본 설정</span>
                 </div>
                 <div class="section-content">
+                    <!--다크모드-->
                     <div class="option">
                         <span class="option-title">다크모드</span>
                         <label id="switch-basic-darkmode" class="switch">
@@ -28,6 +32,7 @@
                         </label>
                     </div>
 
+                    <!--알림-->
                     <div class="option">
                         <span class="option-title">알림</span>
                         <label id="switch-basic-notifications" class="switch">
@@ -38,6 +43,9 @@
                 </div>
             </div>
 
+
+
+            <!--시간표 설정-->
             <div class="section">
                 <div class="section-header">
                     <ion-icon class="section-icon" name="list-outline"></ion-icon>
@@ -48,6 +56,7 @@
                         <span class="option-title">학년/반 설정</span>
                     </div>
 
+                    <!--학년 설정-->
                     <div class="option">
                         <span class="option-title">학년</span>
                         <select id="select-schedular-grade" onchange="selected(this)">
@@ -57,6 +66,7 @@
                         </select>
                     </div>
 
+                    <!--반 설정-->
                     <div class="option">
                         <span class="option-title">반</span>
                         <select id="select-schedular-class" onchange="selected(this)">
@@ -77,6 +87,7 @@
                         <span class="option-title">선택과목 설정</span>
                     </div>
 
+                    <!--선택 A 설정-->
                     <div class="option">
                         <span class="option-title">선택 A</span>
                         <select id="select-schedular-selectA" onchange="selected(this)">
@@ -95,6 +106,7 @@
                         </select>
                     </div>
 
+                    <!--선택 C 설정-->
                     <div class="option">
                         <span class="option-title">선택 C</span>
                         <select id="select-schedular-selectC" onchange="selected(this)">
@@ -112,6 +124,7 @@
                         </select>
                     </div>
 
+                    <!--선택 D 설정-->
                     <div class="option">
                         <span class="option-title">선택 D</span>
                         <select id="select-schedular-selectD" onchange="selected(this)">
@@ -129,6 +142,7 @@
                         </select>
                     </div>
 
+                    <!--선택 E 설정-->
                     <div class="option">
                         <span class="option-title">선택 E</span>
                         <select id="select-schedular-selectE" onchange="selected(this)">
@@ -146,6 +160,7 @@
                         </select>
                     </div>
 
+                    <!--선택 F 설정-->
                     <div class="option">
                         <span class="option-title">선택 F</span>
                         <select id="select-schedular-selectF" onchange="selected(this)">
@@ -165,6 +180,9 @@
                 </div>
             </div>
 
+
+
+            <!--급식 설정-->
             <div class="section">
                 <div class="section-header">
                     <ion-icon class="section-icon" name="fast-food-outline"></ion-icon>
@@ -175,6 +193,7 @@
                         <span class="option-title">알레르기 설정</span>
                     </div>
 
+                    <!--알레르기-->
                     <div class="option">
                         <span class="option-title">1. 달걀</span>
                         <label id="switch-meal-allergy-1" class="switch">
@@ -329,8 +348,6 @@
                 </div>
             </div>
         </main>
-
-
 
 
 

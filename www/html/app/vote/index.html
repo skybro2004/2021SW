@@ -9,47 +9,11 @@
         <link rel="stylesheet" type="text/css" href="./css/index.css">
     </head>
     <body>
-        <!--<div class="container">
-            <div class="wrapper">
-                
-                <img src="./resources/bob.png">
-    
-                <span class="question">식사의 양은 적당했나요?</span>
-                <div class="star">
-                    <label>
-                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                        <input type="radio" name="star" value="1" onclick="rate(1);">
-                    </label>
-                    <label>
-                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                        <input type="radio" name="star" value="2" onclick="rate(2);">
-                    </label>
-                    <label>
-                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                        <input type="radio" name="star" value="3" onclick="rate(3);">
-                    </label>
-                    <label>
-                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                        <input type="radio" name="star" value="4"  onclick="rate(4);">
-                    </label>
-                    <label>
-                        <ion-icon class="star-inner star-disable" name="star"></ion-icon>
-                        <ion-icon class="star-outer" name="star-outline"></ion-icon>
-                        <input type="radio" name="star" value="5"  onclick="rate(5);">
-                    </label>
-                    <span class="star-score">-/5</span>
-                </div>
-                <button class="btn-next disable" onclick="next()">다음</button>
-            </div>
-
-        </div>-->
 
 
 
+
+        <!--quantity-->
         <div class="container">
             <div class="wrapper">
                 
@@ -72,12 +36,13 @@
 
 
 
+        <!--quality-->
         <div class="container invisible">
             <div class="wrapper">
                 
                 <img src="./resources/bob.png">
     
-                <span class="question">식사의 양은 적당했나요?</span>
+                <span class="question">급식의 간은 적당했나요?</span>
                 <input class="slider" type="range" name="rate" value="0" min="-2" max="2" list="tickmarks" oninput="slide(this)">
                 <div class="rate-footer">
                     <span class="disable">너무 싱거웠어요</span>
