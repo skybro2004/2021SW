@@ -2,63 +2,88 @@
 <html>
     <head>
         <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>
             대시보드
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     </head>
     <body>
-        <header class="glassmorphism-card">
+        <header class="glassmorphism-card blur">
             <h1>대시보드</h1>
         </header>
 
 
 
-        <main class="glassmorphism-card" style="backdrop-filter: blur( 6px );-webkit-backdrop-filter: blur( 6px );">
+        <main class="glassmorphism-card blur">
 
 
-            <div class="content-style1 glassmorphism-card" style="padding: 1rem; margin-bottom: 1rem;    height: max-content;">
-                <h2 style="text-align: center; margin-bottom: 1rem;">투표율</h2>
-                <div style="display: flex; align-items: center; height: max-content;">
-                    <div class="chart">
-                        <canvas id="voted" width="25" height="15"></canvas>
-                    </div>
-                    <div style="height: 100%;">
-                        <h3>투표율 변화</h3>
-                        <p>이번주는 화요일에 상승했다가 수요일, 목요일에 걸쳐 하락, 금요일에 상승하였습니다.</p>
-                    </div>
+            <div class="glassmorphism-card content-container content-style2">
+                <div class="chart">
+                    <canvas id="voted"></canvas>
                 </div>
             </div>
 
 
 
-            <div class="content-style1 glassmorphism-card" style="padding: 1rem; margin-bottom: 1rem;">
-                <h2 style="text-align: center; margin-bottom: 1rem;">투표율</h2>
-                <div style="display: flex; align-items: center;">
-                    <div class="chart">
-                        <canvas id="bar-chart"></canvas>
-                    </div>
-                    <div style="height: 100%;">
-                        <h3>asdlkfjasldjfa</h3>
-                        <p>asdlkfjasldjfakls djfklajsdl kfjasldfjlksdjlkf jaslkdjflkjsdalkfja laj;lfjal; sjflajsljflkasjf</p>
-                    </div>
+            <div class="glassmorphism-card content-container content-style3">
+                <div class="chart">
+                    <canvas id="meal-quantity"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="meal-quality"></canvas>
                 </div>
             </div>
 
 
 
-            <div class="content-style1 glassmorphism-card" style="padding: 1rem; margin-bottom: 1rem;">
-                <h2>asdf</h2>
-                <div style="display: flex;">
-                    <div class="chart">
-                        <canvas id="bar-chart"></canvas>
-                    </div>
-                    <p>asdlkfjasldjfaklsd jfklajsdlkfjasldfjlksdj lkfjaslkdjflkjsda lkfjalaj;lfjal;sjflaj sljflkasjf</p>
+            <div class="glassmorphism-card content-container content-style2">
+                <div class="chart">
+                    <canvas id="menu"></canvas>
                 </div>
             </div>
 
+
+
+            <!--
+            <div class="glassmorphism-card content-container content-style3">
+                <div class="chart">
+                    <canvas id="allergy" width="1000" height="1000"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="" width="1000" height="1000"></canvas>
+                </div>
+            </div>
+            -->
+
+
+
+
+            <div class="glassmorphism-card content-container messages">
+                <h1>건의사항</h1>
+                <div class="glassmorphism-card message-wrapper">
+                    <ul class="message-list">
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="glassmorphism-card card-not-available disable">
+                <h1>아직 모인 데이터가 없어요...</h1>
+                <p>데이터가 생기면 여기에 표시됩니다.</p>
+            </div>
+
+
+            
         </main>
+
+
+
+
         <script type="text/javascript" src="./js/index.js"></script>
     </body>
 </html>
