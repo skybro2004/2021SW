@@ -1,0 +1,234 @@
+/*==========header==========*/
+
+
+
+html{
+    font-size: 120%;
+}
+
+
+
+:root{
+    --first-color: #2184BF;
+
+    --bgcolor: #F2F4F6;
+
+    --card-color: #F7F7F7;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    height: fit-content;
+    min-height: 100vh;
+    background-color: var(--bgcolor);
+}
+
+
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+
+.disable{
+    display: none !important;
+    border: 1px solid red !important;
+}
+
+
+
+/*==========/header==========*/
+/*==========main==========*/
+
+
+
+header{
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+header h1{
+    text-align: center;
+    line-height: 10rem;
+}
+
+
+
+main{
+    padding: 1rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/*==========card==========*/
+/*==========base card style==========*/
+.card{
+    background-color: var(--card-color);
+    box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 30rem;
+    border: 1px solid var(--first-color);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-icon{
+    font-size: 1.2em;
+    margin-right: 0.5rem;
+}
+.card-title{
+    width: 100%;
+    font-weight: 600;
+}
+.external-link{
+    font-size: 1.2em;
+}
+
+
+
+/*==========normal card==========*/
+.card-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.5rem;
+}
+.card-content{
+    padding: 0.5rem;
+    padding-bottom: 0;
+}
+
+
+
+/*==========card button==========*/
+.card-btn{
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.card-btn:hover{
+    color: white;
+    background-color: var(--first-color);
+}
+
+
+/*==========card button(popup)==========*/
+.card-popup{
+    color: white;
+    background-color: var(--first-color);
+    box-shadow: 0px 0px 20px #1463918c;
+}
+.card-popup:hover{
+    box-shadow: none;
+    background-color: var(--card-color);
+    color: black;
+}
+/*==========/card==========*/
+
+
+
+/*==========timetable==========*/
+.timetable{
+    width: 100%;
+    display: table;
+}
+.timetable-header{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.timetable-row{
+    position: relative;
+    display: table-row;
+}
+.timetable-col{
+    display: table-cell;
+    padding: 0.2rem 0;
+}
+
+.period{
+    padding: 0.3rem 0;
+    padding-left: 0.3em;
+    width: 4rem;
+    position: relative;
+}
+
+.period::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    top: 0.25rem;
+    background-color: var(--first-color);
+    transition: all 0.2s ease-in-out;
+}
+.period.now::before{
+    content: "";
+    position: absolute;
+    width: 0.2em;
+    height: 1.1em;
+    top: 0.35rem;
+    left: -0.1rem;
+    border-radius: 0.1em;
+}
+
+.period.break::before{
+    content: "";
+    position: absolute;
+    width: 0.3em;
+    height: 0.3em;
+    top: 1.6rem;
+    left: 0.05em;
+    border-radius: 0.15em;
+}
+
+.time{
+    font-size: 0.8rem;
+    color: gray;
+    width: 5rem;
+    white-space: nowrap;
+    height: 0;
+    overflow-y: hidden;
+    overflow-x: visible;
+    transition: all 0.2s;
+}
+.time.show{
+    height: 1rem;
+}
+
+
+
+
+/*==========meal==========*/
+.mealList li{
+    position: relative;
+    padding: 0.3rem;
+}
+.allergy{
+    color: gray;
+    text-decoration: line-through;
+}
+.allergy::before{
+    content: "*";
+    position: absolute;
+    left: -0.5rem;
+    color: red;
+}
+.mealList-footer{
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    color: gray;
+}

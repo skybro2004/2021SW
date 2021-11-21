@@ -86,6 +86,15 @@ fetch(url)
 
             return
         }
+        else if(data.data.index==0){
+            var temp = document.getElementsByClassName("content-container")
+            for(const element of temp){
+                element.classList.add("disable")
+            }
+            document.getElementsByClassName("card-not-available")[0].classList.remove("disable")
+
+            return
+        }
 
         drawChart("meal-quantity", "pie", "급식의 양", {
             labels: [

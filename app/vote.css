@@ -1,0 +1,218 @@
+html{
+    font-size: 120%;
+}
+
+
+
+:root{
+    --first-color: #2184BF;
+
+    --bgcolor: #F2F4F6;
+
+    --card-color: #F7F7F7;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+
+
+
+.disable{
+    display: none !important;
+}
+
+
+
+.invisible{
+    opacity: 0 !important;
+}
+
+
+
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: opacity 1s;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 30rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.img{
+    width: 70%;
+    max-width: 15rem;
+    margin-bottom: 1rem;
+}
+.img.rotate{
+    animation: rotate_image 3s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.question{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+.star{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.star label{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.1rem;
+    cursor: pointer;
+}
+.star input{
+    opacity: 0;
+}
+.star-inner{
+    font-size: 2rem;
+    color: yellow;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.star-disable{
+    color: white;
+}
+.star-enable{
+    color: yellow;
+}
+.star-outer{
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.star-score{
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+
+.btn-next{
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.3rem 1.5rem;
+    background-color: var(--first-color);
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #1463918c;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.btn-next:disabled{
+    opacity: 0;
+}
+
+
+
+input[type=range]{
+    -webkit-appearance: none;
+    width: 70%;
+    max-width: 15rem;
+    transition: width 0.2s;
+    margin: 0.5rem 0;
+}
+.disable input[type=range]{
+    width: 0;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none; /*기본 스타일을 사용할지 말지 정하기 */
+    background-color: var(--first-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 15px;
+    outline: 0;
+    border: 0;
+    margin-top: -8px;
+}
+
+.rate-footer{
+    font-size: 0.9rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+.send-msg{
+    width: 70%;
+    max-width: 15rem;
+    display: flex;
+}
+
+.textbox-send{
+    width: calc(100% - 2rem);
+    height: 2rem;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid gray;
+    font-size: 1rem;
+}
+.textbox-send:focus{
+    border-bottom: 1px solid var(--first-color);
+}
+
+
+.btn-send{
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--first-color);
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #1463918c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-send{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
