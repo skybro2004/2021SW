@@ -1,0 +1,17 @@
+Github Repository
+====================
+앱
+https://github.com/skybro2004/2021SW
+시간표 등 웹사이트
+https://github.com/skybro2004/schedular
+api
+https://github.com/skybro2004/api
+
+Websites
+====================
+시간표
+https://skybro2004.com/schedular
+급식
+https://skybro2004.com/meal
+대시보드
+https://skybro2004.com/dashboard
